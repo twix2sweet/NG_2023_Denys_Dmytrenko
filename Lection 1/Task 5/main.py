@@ -15,8 +15,15 @@ if d > 0 :
 elif d == 0 :
     x1 = ( -b + math.sqrt( d ) ) / 2 * a 
 else :
-    print('There is no values for x')
-    exit()
+    rootExtrdD = math.sqrt( -d )
+    appendFraction = False
+    if ( -b % ( 2 * a ) == 0 ) and ( rootExtrdD % ( 2 * a ) == 0 ) :
+        x1 = '\n' + str( -b / ( 2 * a ) ) + ' - ' + str( rootExtrdD / ( 2 * a ) ) + ' i'
+        x2 = '\n' + str( -b / ( 2 * a ) ) + ' + ' + str( rootExtrdD / ( 2 * a ) ) + ' i'
+    else :
+        x1 = '\n' + str( -b ) + ' - ' + str( rootExtrdD ) + ' i\n---------\n   ' + str( 2 * a )
+        x2 = '\n' + str( -b ) + ' + ' + str( rootExtrdD ) + ' i\n---------\n   ' + str( 2 * a )
+
 
 print( "Your result:\nx1 = {}".format( x1 ) )
 
