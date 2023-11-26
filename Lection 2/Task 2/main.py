@@ -1,15 +1,9 @@
-print( "This program will count how many elements of user input are numbers. Please eneter element and press Enter to continue filling data. Enter 'finish' to finish:)" )
+print( "This program will count how many elements of user input are numbers. Please enter elements and separated with space ' '." )
 
-
-inputList = []
-userInput = input( "Please enter the first value: ")
-
-while( userInput != 'finish' ) :
-    inputList.append( userInput )
-    userInput = input( "Please enter the next value: " )
+userInput = input( "Please enter the values: ")
 
 numbers = 0
-for item in inputList :
+for item in userInput.split( ' ' ) :
     try:
         float( item )
         numbers += 1
